@@ -19,29 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm 🛠️
-        id: pnpm-install
-        with:
-          version: 8
-          run_install: false
-      - name: Get pnpm store directory 📂
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-  
-      - uses: actions/cache@v3
-        name: Setup pnpm cache 🗃️
-        with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-  
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
+        env:
+          PRE_BUILD_COMMAND: npm install -g pnpm
+          CUSTOM_BUILD_COMMAND: pnpm install && pnpm run build
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_COAST_04279E603 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)

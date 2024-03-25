@@ -20,6 +20,7 @@ export default defineConfig(({ command }) => {
     },
     build: {
       outDir: "build",
+      chunkSizeWarningLimit: 1600
     },
   };
 });

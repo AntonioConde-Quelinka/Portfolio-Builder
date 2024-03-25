@@ -1,5 +1,5 @@
 {
-  "tabTitle": "My Portfolio",
+  "tabTitle": "Dukkan Portfolio",
   "imagesPreload": [
     "me-about.png",
     "me.png",
@@ -16,24 +16,24 @@
   ],
   "socials": [
     {
+      "iconName": "Instagram",
+      "url": "https://www.instagram.com/ly_dukkan/?igsh=YjZsdzFhaWZ4YzZt"
+    },
+    {
+      "iconName": "Twitter",
+      "url": "https://twitter.com/LyDukkan"
+    },
+    {
       "iconName": "LinkedIn",
-      "url": "https://linkedin.com/your-name"
+      "url": "https://www.linkedin.com/in/rubén-conde-826697161/"
     },
     {
-      "iconName": "GitHub",
-      "url": "https://github.com/username"
-    },
-    {
-      "iconName": "Facebook",
-      "url": "https://www.facebook.com/username"
-    },
-    {
-      "iconName": "WhatsApp",
-      "url": "https://wa.me/+91{mobileNumber}"
+      "iconName": "GraphicEqSharp",
+      "url": "https://soundcloud.com/user-687296869/tracks"
     },
     {
       "iconName": "Email",
-      "url": "mailto:your-email@email.com"
+      "url": "mailto:ruben.conde.99@gmail.com"
     }
   ],
   "navigation": {
@@ -73,8 +73,8 @@
   "header": {
     "id": "home",
     "header": "Hello I am",
-    "title": "Your Name",
-    "subTitle": "React & JS Developer",
+    "title": "Dukkan (aka Rubén Conde)",
+    "subTitle": "Graphic & Music artist",
     "downloadCVBtn": {
       "title": "My Resume",
       "url": "Resume Link {Drive URL}"
